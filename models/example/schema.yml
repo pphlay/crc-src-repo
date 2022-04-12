@@ -2,19 +2,19 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
+    - name: dim_channel
       description: "A starter dbt model"
       columns:
-          - name: id
+          - name: sales_channel_id
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
 
-    - name: my_second_dbt_model
+    - name: dim_channel_view
       description: "A starter dbt model"
       columns:
-          - name: id
+          - name: sales_channel_id
             description: "The primary key for this table"
             tests:
                 - unique
