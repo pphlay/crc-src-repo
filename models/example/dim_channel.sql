@@ -11,9 +11,7 @@
 
 with source_data as (
 
-    select 1 as id
-    union all
-    select null as id
+    select sales_channel_id as id , sales_channel_name from `dcsea-ac-hpegoog`.hnm.dim_channel
 
 )
 
