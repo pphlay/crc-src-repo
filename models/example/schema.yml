@@ -2,7 +2,7 @@
 version: 2
 
 models:
-    - name: dim_channelxxxx
+    - name: dim_channel
       description: "A starter dbt model"
       columns:
           - name: sales_channel_id
@@ -11,10 +11,10 @@ models:
                 - unique
                 - not_null
 
-    - name: dim_product
+    - name: dim_channel_view
       description: "A starter dbt model"
       columns:
-          - name: id
+          - name: sales_channel_id
             description: "The primary key for this table"
             tests:
                 - unique
