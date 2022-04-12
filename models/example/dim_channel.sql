@@ -7,7 +7,7 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}
+{{ config(materialized='table', cluster_by = "sales_channel_id") }}
 
 with source_data as (
 
