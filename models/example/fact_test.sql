@@ -1,6 +1,15 @@
 {{ config(materialized='table', cluster_by="sales_channel_id") }}
-select A.*,B.*
-from {{ ref('dim_channel') }} A
-inner join  {{ ref('dim_garment_group') }} B on 1=1
-inner join  {{ ref('dim_channel_view_x') }} C on 1=1
-where A.sales_channel_id = 1
+
+with dim_channel as (
+    select * from {{ ref('dim_channel') }}
+),
+dim_garment_group as (
+    select * from  {{ ref('dim_garment_group') }}
+),
+dim_channel_view_x as (
+    select * from {{ ref('dim_channel_view_x') }} 
+)
+select A.*
+from
+    dim_channel A
+    left join dim_garment_group B ON 1=1
