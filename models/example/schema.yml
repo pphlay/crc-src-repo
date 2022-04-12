@@ -19,13 +19,3 @@ models:
             tests:
                 - unique
                 - not_null
-    - name: dim_garment_group
-      description: "A starter dbt model"
-      columns:
-          - name: garment_group_no
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-    - name: fact_test
-      description: "A starter dbt model"
