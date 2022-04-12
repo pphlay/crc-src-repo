@@ -3,4 +3,4 @@
 
 select *
 from {{ ref('dim_channel') }}
-where id = 1
+where sales_channel_id = 1
