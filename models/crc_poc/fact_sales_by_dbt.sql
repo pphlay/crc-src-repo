@@ -48,7 +48,7 @@ dim_section as (
 select 
     a.article_id,
     a.t_dat,
-    last_day(t_dat) as period_dt,
+    last_day(a.t_dat) as period_dt,
     a.product_code
 from
     dcsea-ac-hpegoog.hnm_dl.transactions a
