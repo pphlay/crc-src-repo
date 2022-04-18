@@ -1,10 +1,10 @@
 {{ config(
     materialized='table', 
     partition_by={
-        "field":"t_dat",
+        "field":"period_dt",
         "data_type": "date",
         "granularity": "day"
-        }, cluster_by=["period_dt","product_code","department_no"]) }}
+        }, cluster_by=["product_code","department_no"]) }}
 
 with fact_sales as (
     select * from {{ ref('fact_sales_by_dbt') }}
