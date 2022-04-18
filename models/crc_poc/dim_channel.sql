@@ -11,7 +11,7 @@
 
 with source_data as (
 
-    select distinct sales_channel_id , if(sales_channel_id=1,'Channel 1','Channel 2') as sales_channel_name from dcsea-ac-hpegoog.hnm_views.fact_sales
+    select distinct sales_channel_id , if(sales_channel_id=1,'Channel 1','Channel 2') as sales_channel_name from dcsea-ac-hpegoog.hnm_dl.transactions
 
 )
 
