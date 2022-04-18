@@ -38,3 +38,5 @@ select
     sum(sales_amt * 0.05) as ytd_kpi_3
 from
     fact_sales
+group by 
+    1,2,3,4,5,6,7,8,9,10,11,12,13,14
