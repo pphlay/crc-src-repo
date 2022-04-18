@@ -12,8 +12,8 @@ with dim_channel as (
 dim_garment_group as (
     select * from  {{ ref('dim_garment_group') }}
 ),
-dim_color_group as (
-    select * from {{ ref('dim_color_group') }} 
+dim_colour_group as (
+    select * from {{ ref('dim_colour_group') }} 
 ),
 dim_customer as (
     select * from {{ ref('dim_customer') }} 
@@ -53,4 +53,4 @@ select
 from
     dcsea-ac-hpegoog.hnm_dl.transactions a
     inner join dcsea-ac-hpegoog.hnm_dl.articles b on a.article_id = b.article_id
-    left join dim_color_group c on c.colour_group_code = b.colour_group_code
+    left join dim_colour_group c on c.colour_group_code = b.colour_group_code
