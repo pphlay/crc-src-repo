@@ -24,6 +24,9 @@ select
     garment_group_no,
     customer_id,
     sales_channel_id,
+
+/*Denomalized Column For Account / Measures*/
+
     sum(sales_amt) as sales_amt,
     sum(sales_qty) as sales_qty,
     sum(sales_amt * 0.3) as cogs_amt,
