@@ -50,12 +50,6 @@ select
     a.t_dat,
     last_day(a.t_dat) as period_dt,
     b.product_code,
-    b.department_no
-
-    a.article_id,
-    a.t_dat,
-    last_day(a.t_dat) as period_dt,
-    b.product_code,
     b.product_type_no,
     b.graphical_appearance_no,
     b.colour_group_code,
@@ -73,4 +67,5 @@ select
 from
     dcsea-ac-hpegoog.hnm_dl.transactions a
     inner join dcsea-ac-hpegoog.hnm_dl.articles b on a.article_id = b.article_id
-    left join dim_colour_group c on c.colour_group_code = b.colour_group_code
+group by 
+    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
