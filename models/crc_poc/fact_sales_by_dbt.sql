@@ -53,3 +53,4 @@ select
 from
     dcsea-ac-hpegoog.hnm_dl.transactions a
     inner join dcsea-ac-hpegoog.hnm_dl.articles b on a.article_id = b.article_id
+    left join dim_color_group c on c.colour_group_code = b.colour_group_code
