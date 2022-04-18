@@ -49,7 +49,7 @@ select
     a.article_id,
     a.t_dat,
     last_day(a.t_dat) as period_dt,
-    a.product_code
+    b.product_code
 from
     dcsea-ac-hpegoog.hnm_dl.transactions a
     inner join dcsea-ac-hpegoog.hnm_dl.articles b on a.article_id = b.article_id
