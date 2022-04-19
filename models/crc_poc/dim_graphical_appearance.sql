@@ -5,7 +5,7 @@ with source_data as (
         graphical_appearance_no,
         graphical_appearance_name
     FROM 
-        dcsea-ac-hpegoog.hnm_dl.articles
+        dcsea-ac-hpegoog.hnm_dl.articles  
 )
 
 select *
