@@ -3,9 +3,10 @@
 with source_data as (
     SELECT DISTINCT
         product_code,
-        prod_name as product_name
+        max(prod_name) as product_name
     FROM 
         dcsea-ac-hpegoog.hnm_dl.articles
+    group by 1
 )
 
 select *
