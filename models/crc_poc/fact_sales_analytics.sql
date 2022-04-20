@@ -7,7 +7,7 @@
         }, cluster_by=["product_code","department_no"]) }}
 
 with fact_sales as (
-    select * from {{ ref('fact_sales_by_dbt') }}
+    select * from {{ ref('fact_sales_by_dbt') }}  
 )
 select 
     period_dt,
