@@ -6,7 +6,7 @@
         "granularity": "day"
         }, cluster_by=["period_dt","product_code","department_no"]) }}
 
-with dim_channel as (
+with dim_channel as (   
     select * from {{ ref('dim_channel') }}
 ),
 dim_garment_group as (
