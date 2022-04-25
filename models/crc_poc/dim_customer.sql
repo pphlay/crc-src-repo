@@ -1,6 +1,5 @@
 {{ config(materialized='incremental', unique_key = 'customer_id', 
-merge_update_columns = ['FN', 'active','club_member_status',
-'club_member_status_hash','fashion_news_frequency','age','postal_code','postal_code_encrypted']
+merge_update_columns = ['FN', 'active','club_member_status','club_member_status_hash','fashion_news_frequency','age','postal_code','postal_code_encrypted']
 , cluster_by = "customer_id") }}
 
 with source_data as (
