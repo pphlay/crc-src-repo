@@ -7,7 +7,7 @@ with source_data as (
         customer_id,
         FN,
         ifnull(active,0) as active,
-        club_member_status
+        club_member_status,
         /*Hashing Sample*/
         SHA256(club_member_status) as club_member_status_hash,
         fashion_news_frequency,
