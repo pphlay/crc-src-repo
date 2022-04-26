@@ -42,7 +42,7 @@ dim_product as (
 dim_product_type as (
     select * from {{ ref('dim_product_type') }} 
 ),
-dim_section as (
+dim_section as (     
     select * from {{ ref('dim_section') }} 
 )
 select 
