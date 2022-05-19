@@ -4,7 +4,7 @@
     Did you know that you can also configure models directly within SQL files?
     This will override configurations stated in dbt_project.yml
 
-    Try changing "table" to "view" below fffff
+    Try changing "table" to "view" below fffff abc abdccsdfsfsf
 */
 
 {{ config(materialized='table', cluster_by = "sales_channel_id") }}
